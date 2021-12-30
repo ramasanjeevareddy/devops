@@ -1,0 +1,207 @@
+ls
+
+
+normal user  ( regular user )
+
+root user
+
+
+
+ $
+
+ #
+
+  ubuntu  --------------> root
+
+ su  
+
+
+sudo    su   root
+
+
+     _       _ _ _ _ _ _ _ _ _
+
+
+ 3 types of permissions
+
+
+   read        --    r
+  write     ---     w
+  execute  --     x
+
+
+
+         _ _ _         _ _ _         _ _ _
+         owner       group       others	
+
+
+Numerical notation
+Alphabetical notation
+
+
+Numerical notation
+-----------------------------
+
+ read        --   4
+ write      --   2
+ execute  --   1
+
+
+  f2   ----------  rw-     rw-   r--
+
+   f2   ---------  rwx     rw-    r--
+
+
+r + w +x  --  4 + 2 +1  =  7
+
+
+ 7  -- all permissions
+
+chmod  764   f2
+
+chmod  777  f2
+
+
+
+ read        --   4
+ write      --   2
+ execute  --   1
+
+ 0  -  no permissions
+ 1   --   execute
+ 2  --  w
+ 3  --   wx
+ 4   --  r
+ 5 -  rx
+ 6 -  rw
+ 7 -  rwx
+
+
+
+chmod  770  f2
+
+
+chmod  666  f2
+
+chmod  600  f2
+
+chmod  456  f2
+
+
+chmod  777  d1
+
+++++++++++++++++++++++
+
+
+Alphabetical notation
+
+
+owner     --  u
+group   --    g
+others  --    o
+
+
+ +  
+
+ -
+
+f2  ----------  r--        r-x       rw-
+
+f2  ----------  r--        r-x       rwx
+
+
+chmod  o+x     f2
+
+
+f2  ----------  r--        r-x       rwx
+
+
+f2  --------    rw-        rwx       rwx
+
+
+chmod u+w,g+w    f2
+
+
+chmod u-w,g-w    f2
+
++++++++++++++++++++++++
+
+
+f50  ------          rw-        rw-            r--
+
+f50  ------          rw-        --x            r--
+
+
+
+chmod g=x    f50
+
++
+-
+=
+
+ d1
+  -------- d2
+                --------------d3
+                                     --------------------d4
+
+
+++++++++++
+The Pipe is a command in Linux that lets you use two or more commands,
+ such that output of one command serves as input to the next.
+
+ head -5 f2 | tail -1 
+
+  date | wc -l   
+
+
+---------------------
+An APT repository is a collection of packages 
+APT repository allows you to perform package install, removal, upgrade operations on individual packages.
+
+tree d1 
+
+To install packages
+
+apt-get install packagename
+
+
+Step 1: Update apt  repository 
+Step 2: Install the package
+
+Syntax of Step 1:  Update apt repository
+sudo apt-get update
+
+Syntax of Step 2: Install the required package
+
+sudo apt-get install package_name
+sudo apt-get install tree
+
+
+
+To remove the package
+sudo apt-get remove tree
+
+-----------------------------------------
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Vi Editor
+-------------
+Basic editor in linux
+
+To create a file
+i  - to go to insert mode
+
+:wq  -- save and exit
+
+:q!  -- exit without saving
+
+Default mode - command mode
+
+
+Esc - to come out of insert mode  to command mode
+dd   - to delete a line
+
+yy  --  to copy the line
+p  - to paste  below
+
+++++++++++++++++++++++++++++++++++++++++++++++
